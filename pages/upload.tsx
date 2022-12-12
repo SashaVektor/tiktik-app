@@ -68,6 +68,12 @@ const Upload = () => {
         }
     }
 
+    const handleDiscard = () => {
+        setCategory(topics[0].name)
+        setCaption('')
+        setVideoAsset(null)
+    }
+
     return (
         <div className='flex w-full h-full absolute left-0 sm:top-[75px] top-[100px] mb-10 pt-10 lg:pt-20 justify-center bg-[#f8f8f8]'>
             <div className='bg-white rounded-lg xl:h-[80vh] flex gap-6 flex-wrap justify-center items-center p-14 pt-6'>
@@ -144,7 +150,7 @@ const Upload = () => {
                     </select>
                     <div className='flex gap-6 mt-10'>
                         <button
-                            onClick={() => { }}
+                            onClick={handleDiscard}
                             type="button"
                             className='border-gray-300 border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
                         >
