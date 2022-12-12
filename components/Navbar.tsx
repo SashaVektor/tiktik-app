@@ -24,6 +24,7 @@ const Navbar = () => {
 
     if (searchValue) {
       router.push(`/search/${searchValue}`)
+      setSearchValue('')
     }
   }
 
