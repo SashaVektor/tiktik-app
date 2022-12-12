@@ -64,6 +64,7 @@ const Upload = () => {
             }
 
             await axios.post(`${BASE_URL}/api/post`, document)
+            setSavingPost(false)
             router.push('/')
         }
     }
@@ -71,7 +72,7 @@ const Upload = () => {
     const handleDiscard = () => {
         setCategory(topics[0].name)
         setCaption('')
-        setVideoAsset(null)
+        setVideoAsset(undefined)
     }
 
     return (
@@ -159,9 +160,10 @@ const Upload = () => {
                         <button
                             onClick={handlePost}
                             type="button"
+                            disabled={savingPost}
                             className='text-md font-medium p-2 rounded w-28 lg:w-44 outline-none bg-[#F51997] text-white'
                         >
-                            Post
+                            {savingPost ? 'Posted...' : 'Post'}
                         </button>
                     </div>
                 </div>

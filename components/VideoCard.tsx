@@ -74,20 +74,20 @@ const VideoCard = ({ post }: IProps) => {
                         </video>
                     </Link>
                     {isHover && (
-                        <div className='absolute bottom-6 cursor-pointer left-8 md:left-14 lg:left-0 flex gap-10 lg:justify-between w-[100px] md:w-[50px] p-3'>
+                        <div className='absolute bottom-6 cursor-pointer left-10 md:left-[6%] lg:left-[28%] xl:left-[37%] flex gap-10 lg:justify-between w-[100px] md:w-[50px] p-3'>
                             {playing ? <button onClick={onVideoPress}>
-                                <BsFillPauseFill className='text-gray-300 text-2xl lg:text-4xl'/>
+                                <BsFillPauseFill className='text-[#F51997] text-2xl lg:text-4xl'/>
                             </button> : (
                                 <button onClick={onVideoPress}>
-                                    <BsFillPlayFill className='text-2xl lg:text-4xl text-gray-300'/>
+                                    <BsFillPlayFill className='text-2xl lg:text-4xl text-[#F51997]'/>
                                 </button>
                             )
                             }
                             {isMuted ? <button onClick={() => setIsMuted(false)}>
-                                <HiVolumeOff className='text-gray-300 text-2xl lg:text-4xl'/>
+                                <HiVolumeOff className='text-[#F51997] text-2xl lg:text-4xl'/>
                             </button> : (
                                 <button onClick={() => setIsMuted(true)}>
-                                    <HiVolumeUp className='text-gray-300 text-2xl lg:text-4xl'/>
+                                    <HiVolumeUp className='text-[#F51997] text-2xl lg:text-4xl'/>
                                 </button>
                             )
                             }
