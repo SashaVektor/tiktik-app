@@ -26,19 +26,19 @@ const Navbar = () => {
   }
 
   return (
-    <div className='w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4'>
+    <div className='w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4 flex-wrap md:flex-nowrap h-[120px] sm:h-[70px]'>
       <Link href="/">
         <div className='w-[100px] md:w-[130px]'>
           <Image className='cursor-pointer'
             src={logo} alt="tiktik" layout='responsive' />
         </div>
       </Link>
-      <div className='relative hidden md:block'>
+      <div className='relative'>
         <form onSubmit={handleSearch}
-          className="absolute md:static top-10 -left-20 bg-white">
+          className="static bg-white">
           <input type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)}
-            placeholder="Search accounts and videos"
-            className='bg-primary p-3 md:text-md font-medium border-2 border-gray-100 focus:outline-none focus:boder-2 focus:border-gray-300 w-[300px] md:w-[350px] rounded-full md:top-0' />
+            placeholder="Search..."
+            className='bg-primary p-3 md:text-md font-medium border-2 border-gray-100 focus:outline-none focus:boder-2 focus:border-gray-300 w-[200px] sm:w-[300px] md:w-[350px] rounded-full md:top-0' />
           <button
             onClick={handleSearch}
             className="absolute md:right-5 right-6 top-4 border-l-2 border-gray-300 pl-4 text-2xl text-gray-400">
